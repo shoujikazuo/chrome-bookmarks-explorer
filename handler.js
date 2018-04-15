@@ -6,7 +6,8 @@ function clickHandler(e) {
     chrome.bookmarks.getTree(function(bookmarksArray /* array of BookmarkTreeNode */) {
         bookmarks = bookmarks.withNodes(bookmarksArray);
         var urls = bookmarks.getURLs();
-        fetchURL(urls[0], "");
+        for(var i = 0; i < urls.length; i++)
+            fetchURL(urls[i], "");
     });
     // var mainProcess = function() {
     //     return new Promise(function(resolve) {
