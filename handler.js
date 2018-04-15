@@ -5,8 +5,14 @@ var bookmarks = new SimpleFlattenBookmarks();
 function clickHandler(e) {
     chrome.bookmarks.getTree(function(bookmarksArray /* array of BookmarkTreeNode */) {
         bookmarks = bookmarks.withNodes(bookmarksArray);
-        // document.getElementById('result').innerHTML = bookmarks.getURLs();
+        var urls = bookmarks.getURLs();
+        fetchURL(urls[0], "");
     });
+    // var mainProcess = function() {
+    //     return new Promise(function(resolve) {
+
+    //     });
+    // };
 }
 
 document.addEventListener('DOMContentLoaded', function() {
