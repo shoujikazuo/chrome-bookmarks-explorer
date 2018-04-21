@@ -8,6 +8,14 @@
       "default_title": "Ext title",
       "default_popup": "popup.html"
     },
+    "background": {
+      "persistent": false,
+      "scripts": [
+        "./utils/array/to-flatten.js",
+        "./model/maindriver.js",
+        "./model/bookmarks/bookmarks.js"
+      ]
+    },
     "permissions": [
       "http://*/",
       "https://*/",

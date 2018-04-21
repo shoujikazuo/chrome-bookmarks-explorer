@@ -1,19 +1,7 @@
-// import ""
+import { driver } from './model/maindriver.js';
 
-var bookmarks = new SimpleFlattenBookmarks();
-
-function clickHandler(e) {
-    chrome.bookmarks.getTree(function(bookmarksArray /* array of BookmarkTreeNode */) {
-        bookmarks = bookmarks.withNodes(bookmarksArray);
-        var urls = bookmarks.getURLs();
-        for(var i = 0; i < urls.length; i++)
-            fetchURL(urls[i], "");
-    });
-    // var mainProcess = function() {
-    //     return new Promise(function(resolve) {
-
-    //     });
-    // };
+function onFindButtonClick(e) {
+    driver.main();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,5 +15,5 @@ document.addEventListener('DOMContentLoaded', function() {
      * or a nonce ('nonce-...') is required to enable inline execution.
      * """"
      */
-    document.getElementById('findBtn').addEventListener('click', clickHandler);
+    document.getElementById('findBtn').addEventListener('click', onFindButtonClick);
 });
