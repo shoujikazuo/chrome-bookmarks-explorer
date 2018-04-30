@@ -2,8 +2,9 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'; 'unsafe-inline';",
   "default_locale": "en",
   "icons": {
     "16": "images/icon-16.png",
@@ -20,6 +21,9 @@
       "38": "images/icon-38.png"
     },
     "default_title": "__MSG_browserActionTitle__",
+    "scripts": [
+      "scripts/handler.ts"
+    ],
     "default_popup": "pages/popup.html"
   },
   "options_page": "pages/options.html",
@@ -38,7 +42,6 @@
     "debugger",
     "declarativeContent",
     "history",
-    "input",
     "management",
     "notifications",
     "pageCapture",
