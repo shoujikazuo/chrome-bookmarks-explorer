@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "bookmarks search",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "crbookmarksearch",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "find keyword in web sites bookmarked in chrome.",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "bookmarks search",
+    "description": "The title of the browser action button"
+  }
+}
