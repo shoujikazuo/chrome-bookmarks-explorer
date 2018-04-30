@@ -11,14 +11,15 @@
     "background": {
       "persistent": false,
       "scripts": [
-        "./utils/array/to-flatten.js",
+        "./utils/array/arrayutils.js",
         "./model/maindriver.js",
-        "./model/bookmarks/bookmarks.js"
+        "./model/bookmarks/flatten.js",
+        "./model/http-response/no-cache.js"
       ]
     },
     "permissions": [
-      "http://*/",
-      "https://*/",
+      "http://*/*",
+      "https://*/*",
       "bookmarks"
     ]
   }
