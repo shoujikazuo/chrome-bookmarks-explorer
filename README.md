@@ -1,3 +1,5 @@
+# 疲れたのでやめる
+--
 # bookmarks search
 
 find keyword in web sites bookmarked in chrome.
